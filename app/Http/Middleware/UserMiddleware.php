@@ -22,7 +22,7 @@ class UserMiddleware
     {
         if (Auth::check()) {
 
-            if (Auth::user()->role_as == '0') { //1 = Admin && 0 = normal user
+            if (Auth::user()->role_as == '0') { //1 = Admin &&& 0 = normal user
                 return $next($request);
             } else {
                 return redirect("/home")->with('status', 'Access Denied! As you are not an Admin');
