@@ -4,7 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+
 
 class UserMiddleware
 {
@@ -25,7 +27,7 @@ class UserMiddleware
             if (Auth::user()->role_as == '0') { //1 = Admin &&& 0 = normal user
                 return $next($request);
             } else {
-                return redirect("/home")->with('status', 'Access Denied! As you are not an Admin');
+                return redirect("/home")->with('status', 'Access Denied! As you are not an User');
             }
         } else {
             return redirect('/login')->with('status', 'Please Login First');

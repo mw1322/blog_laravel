@@ -1,19 +1,15 @@
 <div class="global-navbar">
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <h1>Logo</h1>
             </div>
-            <div class="col-md-9">
-                <div style="background-color: black" class="border text-center p-2">
-                    <h5 style="color: aliceblue">Advertise Here</h5>
-                </div>
-            </div>
         </div>
-    </div>
+    </div> --}}
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-green">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Blog App</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,9 +37,21 @@
               <a class="nav-link" href="{{ url('blog/'.$cateitem->slug) }}">{{$cateitem->name}}</a>
             </li>
         @endforeach
+        @if(Auth::check())
+        <li class=""><a class= "nav-link btn-danger " href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+            </a>
+        </li>
+        <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+            @csrf
+        </form>
+        @endif
+
 
 
       </ul>
+      {{-- <a href="{{url('/login')}}"  class="btn btn-sm float-end">Login</a>
+      <a href="{{url('/register')}}" style="margin-left: 12px" class="btn btn-sm float-end">Register</a> --}}
     </div>
   </div>
 </nav>

@@ -11,7 +11,8 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $category = Category::all();
+        return view('frontend.index', compact('category'));
     }
     public function viewCategoryPost($category_slug)
     {

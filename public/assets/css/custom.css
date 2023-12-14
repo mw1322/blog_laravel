@@ -2,7 +2,7 @@ body {
     /* background-color: rgb(243, 227, 208); */
 }
 .bg-green {
-    background-color: #04aa6d !important;
+    background-color: #18b0ca !important;
 }
 .navbar {
     padding: 0px 0px !important;
@@ -52,4 +52,10 @@ a {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
+}
+.underline {
+    height: 3px;
+    width: 60px;
+    background-color: #18b0ca !important;
+    margin-bottom: 10px;
 }

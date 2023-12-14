@@ -62,10 +62,10 @@
                                             <label>Navbar Status</label>
                                             <input type="checkbox"  name="navbar_status" {{$category->navbar_status == '1' ? 'checked' : ''}}/>
                                         </div>
-                                        <div class="col-md-3 mb-3">
+                                        {{-- <div class="col-md-3 mb-3">
                                             <label>Status</label>
                                             <input type="checkbox" name="status" {{$category->status == '1' ? 'checked' : ''}}/>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-6">
                                             <button type="submit" class="btn btn-primary">Update Category</button>
                                         </div>

@@ -40,7 +40,7 @@
                         <td>
                         <img src="{{asset('uploads/category/'.$item->image)}}" width="50px" height="50px" alt="">
                         </td>
-                        <td>{{$item->status == '1' ? 'Hidden' : 'Shown'}}</td>
+                        <td>{{$item->navbar_status == '1' ? 'Hidden' : 'Shown'}}</td>
                         <td><a href="{{url("admin/edit-category/".$item->id)}}" class="btn btn-success">Edit</a></td>
                         <td><a href="{{url("admin/delete-category/".$item->id)}}" class="btn btn-danger">Delete</a></td>
                     </tr>
